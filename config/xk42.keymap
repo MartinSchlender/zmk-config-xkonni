@@ -1,15 +1,24 @@
 /*
- * Merged X42 migration keymap
+ * X42 migrated keymap
  *
- * Strategy:
- * - Keep the full Corne logic/configuration
- * - Add X42 key-label support
- * - Preserve all custom HRMs, combos, macros and DE mappings
+ * Generated from corne_choc_pro.keymap
  *
- * Notes:
- * - This assumes the X42 shield/layout is compatible with the Corne 42 layout.
- * - If combo positions behave differently, only the combo indices may need adjustment.
- * - Keep the X42 shield/build configuration from the X42 repo.
+ * What was preserved:
+ * - HRMs
+ * - behaviors
+ * - macros
+ * - combos
+ * - DE key aliases
+ * - layer logic
+ *
+ * X42 additions:
+ * - key-labels/xk42.h include
+ *
+ * IMPORTANT:
+ * This version assumes the X42 physical layout ordering.
+ * Combo positions may still need small manual verification,
+ * but the structural layout compatibility is now aligned
+ * with the X42 shield/layout files.
  */
 
 /*
