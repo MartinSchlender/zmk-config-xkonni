@@ -317,49 +317,24 @@
         };
     };
 
-    combos {
+combos {
         compatible = "zmk,combos";
-
-        combo_to_layer4 {
-            bindings = <&to 4>;
-            key-positions = <1 12>;
-            layers = <0>;
-        };
-
-        combo_to_layer0 {
-            bindings = <&to 0>;
-            key-positions = <1 12>;
-            layers = <4>;
-        };
-
-        caps_lock {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <41 44>;
-        };
-
-        combo_to_Layer_9 {
-            bindings = <&to 9>;
-            key-positions = <0 13>;
-            layers = <0>;
-        };
-
-        combo_back_from_9 {
-            bindings = <&to 0>;
-            key-positions = <0 13>;
-            layers = <9>;
-        };
-
-        combo_to_Layer_13 {
-            bindings = <&to 13>;
-            key-positions = <0 13>;
-            layers = <4>;
-        };
-
-        combo_back_from_13 {
-            bindings = <&to 4>;
-            key-positions = <0 13>;
-            layers = <13>;
-        };
+        
+        // Wechselt zwischen den Haupt-Layern (Mac <-> Win)
+        // Ursprünglich 1 & 12 -> Jetzt angepasst auf xk42 Matrix
+        combo_to_layer4 { bindings = <&to 4>; key-positions = <1 10>; layers = <0>; };
+        combo_to_layer0 { bindings = <&to 0>; key-positions = <1 10>; layers = <4>; };
+        
+        // CapsLock Combo: Geändert von 41/44 auf zwei erreichbare Tasten (z.B. die beiden innersten Daumentasten)
+        // Beim xk42 sind das oft 37 und 38.
+        caps_lock { bindings = <&kp CAPSLOCK>; key-positions = <37 38>; };
+        
+        // System-Wechsel (Bone Layer)
+        combo_to_Layer_9 { bindings = <&to 9>; key-positions = <0 11>; layers = <0>; };
+        combo_back_from_9 { bindings = <&to 0>; key-positions = <0 11>; layers = <9>; };
+        
+        combo_to_Layer_13 { bindings = <&to 13>; key-positions = <0 11>; layers = <4>; };
+        combo_back_from_13 { bindings = <&to 4>; key-positions = <0 11>; layers = <13>; };
     };
 
     keymap {
