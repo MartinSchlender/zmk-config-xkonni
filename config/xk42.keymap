@@ -4,20 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "keys_de.h"
 #include "key-labels/xk42.h"
-
-&mmv {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <600>;
-};
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
