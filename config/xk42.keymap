@@ -339,7 +339,7 @@
 
         caps_lock {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <37 38>;
+            key-positions = <37 40>;
         };
 
         // System-Wechsel (Bone Layer)
